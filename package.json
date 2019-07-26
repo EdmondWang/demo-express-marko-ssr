@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "marko": "^4.14.23",
+    "marko": "^4.16.6",
     "serve-static": "^1.13.2"
   },
   "devDependencies": {
