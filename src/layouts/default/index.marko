@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        <include(data.title)/>
+        <${data.title}/>
     </title>
-     <include(data.styles)/>
+     <${data.styles}/>
 </head>
 <body>
     <div class="container">
         <h1>
-            <include(data.title)/>
+            <${data.title}/>
         </h1>
 
         <main id="main">
-            <include(data.body)/>
+            <${data.body}/>
         </main>
     </div>
 
-    <include(data.scripts)/>
+    <${data.scripts}/>
 </body>
 </html>

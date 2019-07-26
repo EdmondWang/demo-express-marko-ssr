@@ -1,4 +1,4 @@
-// Compiled using marko@4.14.23 - DO NOT EDIT
+// Compiled using marko@4.16.6 - DO NOT EDIT
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
@@ -8,7 +8,6 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
     marko_defineComponent = components_helpers.c,
     marko_loadTemplate = require("marko/src/runtime/helper-loadTemplate"),
     Layout = marko_loadTemplate(require.resolve("../../layouts/default/index.marko")),
-    hasRenderBodyKey = Symbol.for("hasRenderBody"),
     app_template = marko_loadTemplate(require.resolve("../../components/app")),
     marko_helpers = require("marko/src/runtime/html/helpers"),
     marko_loadTag = marko_helpers.t,
@@ -18,7 +17,7 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  marko_dynamicTag(Layout, {
+  marko_dynamicTag(out, Layout, {
       scripts: {
           renderBody: function renderBody(out) {
             out.w("<script src=\"/static/bundle.js\"></script>");
@@ -33,9 +32,8 @@ function render(input, out, __component, component, state) {
           renderBody: function renderBody(out) {
             app_tag({}, out, __component, "5");
           }
-        },
-      [hasRenderBodyKey]: true
-    }, out, __component, "0");
+        }
+    }, null, null, __component, "0");
 }
 
 marko_template._ = marko_renderer(render, {
