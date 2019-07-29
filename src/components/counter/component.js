@@ -24,4 +24,4 @@ module.exports = {
         console.log('on Destroy');
     }
 
-}
+};
