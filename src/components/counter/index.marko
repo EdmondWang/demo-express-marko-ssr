@@ -1,4 +1,6 @@
 <p>${data.name}</p>
 <div>The current count is ${state.count}</div>
-<div>The nested count is ${state.nest.count}</div>
+<if(state.hasNestedCount)>
+    <div>The nested count is ${state.nest.count}</div>
+</if>
 <button on-click('increment')>Click me!</button>
