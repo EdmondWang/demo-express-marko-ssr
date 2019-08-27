@@ -9,5 +9,10 @@ import Layout from "../../layouts/default/index.marko"
     </@title>
     <@body>
         <app/>
+        <await(data.promise) timeout=400000>
+            <@then|result|>
+                Await result: ${result}
+            </@then>
+        </await>
     </@body>
 </>

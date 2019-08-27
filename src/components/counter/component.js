@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
 
     onCreate(input) {
@@ -22,6 +24,10 @@ module.exports = {
 
     OnDestroy() {
         console.log('on Destroy');
-    }
+    },
 
+    increment() {
+        this.state.count++;
+        this.state.nest.count++;
+    }
 };
