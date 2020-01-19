@@ -5,7 +5,7 @@ const serveStatic = require('serve-static');
 require("marko/express"); // Marko provides a submodule (marko/express) to add a res.marko method to the express response object.
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use('/static', serveStatic(__dirname + '/dist'));
 app.get('/', require('./src/pages/home'));

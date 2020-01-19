@@ -5,7 +5,7 @@ module.exports = function(req, res) {
     res.marko(template, {
         promise: new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve('I am mengmeng!')
+                resolve('Async result after 30s!')
             }, 30000);
         })
     });
