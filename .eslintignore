@@ -1,0 +1,6 @@
+node_modules
+dist
+**/*.marko.js
+test/**/coverage/**/*.js
+# According to https://groups.google.com/forum/#!topic/eslint/UGoM2h4O9Dg, eslint should not be used on json file
+**/*.json

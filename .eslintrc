@@ -1,0 +1,140 @@
+{
+	"env": {
+		//remove either of the lines below if you don't need it
+		//enable nodejs environment
+		"node": true,
+		//enable browser environment
+		"browser": true,
+		"es6": true,
+		"jquery": true,
+		"jasmine": true,
+		"protractor": true
+	},
+
+	"globals": {
+		//place settings for globals here, such as
+		"requirejs": true
+	},
+
+	"extends": ["eslint:recommended"],
+	"rules": {
+		//    "off" or 0 - turn the rule off
+		//    "warn" or 1 - turn the rule on as a warning (doesn’t affect exit code)
+		//    "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+
+		// the following rules documented on http://eslint.org/docs/rules/ as
+		// "Possible Errors" - These rules relate to possible syntax or logic errors in JavaScript code
+
+		"comma-dangle": 0,
+		"no-alert": 2,
+		"no-cond-assign": 2,
+		// todo: should be using winston instead of console log
+		"no-console": [
+			"warn",
+			{
+				"allow": [
+					"error",
+					"warn",
+					"time",
+					"timeEnd"
+				]
+			}
+		],
+		"no-unsafe-negation": 2,
+		"no-new": 2,
+		"no-prototype-builtins": 0,
+		"valid-jsdoc": 0,
+
+		// the following rules documented on http://eslint.org/docs/rules/ as
+		// "Best Practices"
+
+		"curly": 2,
+		"eqeqeq": 2,
+		"block-scoped-var": 2,
+		"complexity": 2,
+		"default-case": 2,
+		"no-eq-null": 2,
+		"no-eval": 2,
+		"yoda": 2,
+		"strict": 2,
+
+		// todo google eslint configuration is set to 2 spaces, this is the work-round for current eslint
+		"indent": ["error", 4],
+
+		// the following rules documented on http://eslint.org/docs/rules/ as
+		// "Variables" - These rules relate to variable declarations
+
+		"no-shadow": 2,
+		"no-use-before-define": 2,
+
+		// the following rules documented on http://eslint.org/docs/rules/ as
+		// "Node.js and CommonJS" - These rules relate to code running in Node.js, or in browsers with CommonJS:
+
+		// none (yet)
+
+		// the following rules documented on http://eslint.org/docs/rules/ as
+		// "Sytlistic Issues" - These rules relate to style guidelines, and are therefore quite subjective:
+
+		"no-bitwise": [
+			2,
+			{ "allow": ["~"] }
+		],
+		"brace-style": [
+			2,
+			"1tbs"
+		],
+		"camelcase": 2,
+		"consistent-this": [2, "_this"],
+		"padded-blocks": [
+			0,
+			"never"
+		],
+		"quotes": [
+			0,
+			"single",
+			{
+				"avoidEscape": true,
+				"allowTemplateLiterals": true
+			}
+		],
+		"no-nested-ternary": 1,
+		"space-before-function-paren": [
+			2,
+			"never"
+		],
+		"space-infix-ops": 2,
+
+		// the following rules documented on http://eslint.org/docs/rules/ as
+		// EMCAScript6 - These rules relate to ES6, also known as ES2015
+
+		"no-class-assign": 2,
+		"no-confusing-arrow": 2,
+		"no-const-assign": 2,
+		"no-dupe-class-members": 2,
+
+		// TODO The following rules should be cleaned up after code cleanup is done
+		// All the numbers below are from the first time when Google eslint is introduced
+		// Places to fix: 8716
+		"max-len": 0,
+		// Places to fix: 1308
+		"require-jsdoc": 0,
+		// Places to fix: 270
+		"no-invalid-this": 0,
+		// Places to fix: 106
+		"new-cap": 0,
+		// Places to fix: 73
+		"one-var": 0,
+
+		"no-empty": ["error", { "allowEmptyCatch": true }]
+	},
+
+	"plugins": [
+		//you can put plugins here
+	],
+
+	"parserOptions": {
+		// To support object rest spread. According to eslint/lib/linter.js, when supporting object
+		// rest spread, ecmaVersion will be forced to be no less than 9 no matter what the settings is.
+		"ecmaVersion": 9
+	}
+}

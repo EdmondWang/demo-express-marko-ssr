@@ -17,21 +17,21 @@ module.exports = {
     },
     module: {
         rules: [{
-                test: /\.marko$/,
-                loader: 'marko-loader'
-            },
-            {
-                test: /\.svg/,
-                loader: 'svg-url-loader'
-            },
-            {
-                test: /\.(jpg|jpeg|gif|png)$/,
-                loader: 'file-loader',
-                query: {
-                    name: 'static/images/[hash].[ext]',
-                    publicPath: '/'
-                }
+            test: /\.marko$/,
+            loader: 'marko-loader'
+        },
+        {
+            test: /\.svg/,
+            loader: 'svg-url-loader'
+        },
+        {
+            test: /\.(jpg|jpeg|gif|png)$/,
+            loader: 'file-loader',
+            query: {
+                name: 'static/images/[hash].[ext]',
+                publicPath: '/'
             }
+        }
         ]
     },
     plugins: [
